@@ -16,6 +16,7 @@ defmodule ExchangeZoo.Binance.FWS do
     AccountUpdateEvent,
     OrderTradeUpdateEvent,
     StrategyUpdateEvent,
+    TradeLiteEvent,
     GridUpdateEvent
   }
 
@@ -93,4 +94,7 @@ defmodule ExchangeZoo.Binance.FWS do
 
   def parse_event(%{"e" => "GRID_UPDATE"} = data),
     do: GridUpdateEvent.from!(data)
+
+  def parse_event(%{"e" => "TRADE_LITE"} = data),
+    do: TradeLiteEvent.from!(data)
 end

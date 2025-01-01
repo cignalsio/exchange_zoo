@@ -534,6 +534,31 @@ defmodule ExchangeZoo.Binance.ModelTest do
     end
   end
 
+  describe "TradeLiteEvent" do
+    alias ExchangeZoo.Binance.Model.TradeLiteEvent
+
+    test "should parse TRADE_LITE event" do
+      expected = %TradeLiteEvent{
+        event_time: 1_721_895_408_092,
+        transaction_time: 1_721_895_408_214,
+        symbol: "BTCUSDT",
+        maker_side: false,
+        side: :buy,
+        original_quantity: Decimal.new("0.001"),
+        original_price: Decimal.new("0"),
+        order_last_filled_qty: Decimal.new("0.040"),
+        last_fill_price: Decimal.new("64089.20"),
+        client_order_id: "z8hcUoOsqEdKMeKPSABslD",
+        order_id: 8_886_774,
+        trade_id: 109_100_866
+      }
+
+      assert expected ==
+               json_fixture("binance/events/trade_lite")
+               |> TradeLiteEvent.from!()
+    end
+  end
+
   describe "AccountConfigUpdateEvent" do
     alias ExchangeZoo.Binance.Model.AccountConfigUpdateEvent
 
