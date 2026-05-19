@@ -4,7 +4,7 @@ defmodule ExchangeZoo.Binance.Model.ContractInfoEvent do
 
   @primary_key false
 
-  @contract_types ~w(perpetual current_month next_month current_quarter next_quarter perpetual_delivering)a
+  @contract_types ~w(perpetual current_month next_month current_quarter next_quarter perpetual_delivering tradifi_perpetual)a
   @contract_statuses ~w(pending_trading trading pre_delivering delivering delivered pre_settle settling close)a
 
   @fields %{
