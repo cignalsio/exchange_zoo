@@ -27,11 +27,11 @@ defmodule ExchangeZoo.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:finch, "~> 0.18"},
-      {:wind, github: "bfolkens/wind", ref: "96ec17c14c07563224b973154a13b3cad260373f"},
+      {:finch, "~> 0.22"},
+      {:wind, github: "bfolkens/wind", ref: "8378c8b47cf8934b3fcb1b09bdb760a2eaadda85"},
       # {:wind, path: "/Users/bfolkens/dev/bfolkens-github/wind"},
       {:jason, "~> 1.1"},
-      {:ecto, "~> 3.9"},
+      {:ecto, "~> 3.14"},
     ]
   end
 end
