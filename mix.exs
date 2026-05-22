@@ -31,7 +31,7 @@ defmodule ExchangeZoo.MixProject do
       {:wind, github: "bfolkens/wind", ref: "8378c8b47cf8934b3fcb1b09bdb760a2eaadda85"},
       # {:wind, path: "/Users/bfolkens/dev/bfolkens-github/wind"},
       {:jason, "~> 1.1"},
-      {:ecto, "~> 3.14"},
+      {:ecto, "~> 3.0"},
     ]
   end
 end
