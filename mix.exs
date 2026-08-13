@@ -28,7 +28,7 @@ defmodule ExchangeZoo.MixProject do
   defp deps do
     [
       {:finch, "~> 0.22"},
-      {:wind, github: "bfolkens/wind", ref: "8378c8b47cf8934b3fcb1b09bdb760a2eaadda85"},
+      {:wind, github: "bfolkens/wind", ref: "ebf384bb28798bf08d63a22d7585bf87a4471197"},
       # {:wind, path: "/Users/bfolkens/dev/bfolkens-github/wind"},
       {:jason, "~> 1.1"},
       {:ecto, "~> 3.0"},
