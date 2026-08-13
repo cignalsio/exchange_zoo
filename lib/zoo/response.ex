@@ -13,8 +13,10 @@ defmodule ExchangeZoo.Response do
     end
   end
 
-  def decompress_body(response, [algorithm | rest]) when algorithm in ["gzip", "x-gzip"],
-    do: decompress_body(%Finch.Response{response | body: :zlib.gunzip(response.body)}, rest)
+  def decompress_body(%Finch.Response{} = response, [algorithm | rest])
+      when algorithm in ["gzip", "x-gzip"] do
+    decompress_body(%Finch.Response{response | body: :zlib.gunzip(response.body)}, rest)
+  end
 
   def decompress_body(response, ["identity" | rest]), do: decompress_body(response, rest)
 
